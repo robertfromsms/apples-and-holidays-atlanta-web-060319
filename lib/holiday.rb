@@ -33,7 +33,9 @@ end
 def add_supply_to_winter_holidays(holiday_hash, supply)
   holiday_hash.each {|key, value|
     if key == :winter
-      value.push(supply)
+      value.each {|key, value|
+        value.push(supply)
+      }
     end
   }
 end
