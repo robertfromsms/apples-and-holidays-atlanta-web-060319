@@ -64,11 +64,13 @@ end
 # return an array of all of the supplies that are used in the winter season
 
 def all_winter_holiday_supplies(holiday_hash)
+  supplies = []
   holiday_hash.each {|season, holiday_name|
     holiday_name.each {|holiday_name, supply|
-      return [].push(supply).flatten
+      supplies.push(supply).flatten
     }
   }
+  return supplies
 end
 
 def all_supplies_in_holidays(holiday_hash)
