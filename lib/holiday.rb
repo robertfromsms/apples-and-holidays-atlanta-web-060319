@@ -40,16 +40,36 @@ def add_supply_to_winter_holidays(holiday_hash, supply)
   }
 end
 
+# again, holiday_hash is the same as the ones above
+# add the second argument to the memorial day array
 
 def add_supply_to_memorial_day(holiday_hash, supply)
-  # again, holiday_hash is the same as the ones above
-  # add the second argument to the memorial day array
+  holiday_hash.each {|key, value|
+    if key == :spring
+      value.each {|key, value|
+        value.push(supply)
+      }
+    end
+  }
 
 end
 
+# code here
+# remember to return the updated hash
+
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
-  # code here
-  # remember to return the updated hash
+  
+  holiday_hash.each {|key, value|
+    if key == season
+      value.each {|key, value|
+        if key == holiday_name
+          supply_array.each {|element|
+            value.push(element)
+          }
+        end  
+      }
+    end
+  }
 
 end
 
