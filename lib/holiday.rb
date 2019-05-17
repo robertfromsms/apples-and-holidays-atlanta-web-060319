@@ -58,7 +58,7 @@ end
 # remember to return the updated hash
 
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
-  
+
   holiday_hash.each {|key, value|
     if key == season
       value.each {|key, value|
@@ -66,7 +66,7 @@ def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_arr
           supply_array.each {|element|
             value.push(element)
           }
-        end  
+        end
       }
     end
   }
