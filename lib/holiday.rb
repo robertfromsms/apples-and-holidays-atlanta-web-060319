@@ -21,7 +21,7 @@ require 'pry'
 def second_supply_for_fourth_of_july(holiday_hash)
   holiday_hash.each {|key, value|
     if key == :summer
-      return key[1]
+      return value[1]
     end
   }
 end
