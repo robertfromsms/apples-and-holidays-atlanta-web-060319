@@ -67,10 +67,10 @@ def all_winter_holiday_supplies(holiday_hash)
   supplies = []
   holiday_hash.each {|season, holiday_name|
     holiday_name.each {|holiday_name, supply|
-      supplies.push(supply).flatten
+      supplies.push(supply)
     }
   }
-  return supplies
+  return supplies.flatten
 end
 
 def all_supplies_in_holidays(holiday_hash)
